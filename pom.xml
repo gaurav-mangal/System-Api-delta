@@ -35,7 +35,7 @@
                     <muleVersion>4.3.0</muleVersion>
                     <username>gaurimangal1</username>
                     <password>Suncity@456</password>
-                    <applicationName>System-Api-poc-delta</applicationName>
+                    <applicationName>System-Api-poc-deltaflight</applicationName>
                     <environment>Sandbox</environment>
                     <workers>1</workers>
                     <workerType>MICRO</workerType>
