@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="datatype" format="xml">
+      <types:example format="xml" element="{http://schemas.xmlsoap.org/soap/envelope/}Envelope" location="examples/datatype-1.xml"/>
+    </types:type>
+    <types:type name="data1" format="xml">
+      <types:example format="xml" element="{http://schemas.xmlsoap.org/soap/envelope/}Envelope" location="examples/deltadata.xml"/>
+    </types:type>
+    <types:type name="flightInput" format="xml">
+      <types:example format="xml" element="{http://schemas.xmlsoap.org/soap/envelope/}Envelope" location="examples/flightInput.xml"/>
+    </types:type>
+    <types:type name="flight" format="json">
+      <types:shape format="weave" example="examples/flight.json"><![CDATA[%dw 2.0
+
+type flight = {| destination: String |} {"example": "{\\\"destination\\\":\\\"LAX\\\"}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#dfc44da9-088d-4265-9747-4c82c52e855e">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="data1"/>
+        </types:message>
+      </types:input-event>
+      <types:output-event>
+        <types:message>
+          <types:payload type="datatype"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+  <types:enrichment select="#2ae19016-9e91-4308-aa98-9d5151f8b126">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="flight"/>
+        </types:message>
+      </types:input-event>
+      <types:output-event>
+        <types:message>
+          <types:payload type="flightInput"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

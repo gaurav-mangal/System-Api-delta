@@ -1,0 +1,36 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:findFlightResponse xmlns:ns2="http://soap.training.mulesoft.com/">
+         <return>
+            <airlineName>Delta</airlineName>
+            <code>A1FGF4</code>
+            <departureDate>2015/02/13</departureDate>
+            <destination>PDX</destination>
+            <emptySeats>80</emptySeats>
+            <origin>MUA</origin>
+            <planeType>Boing 777</planeType>
+            <price>958.0</price>
+         </return>
+         <return>
+            <airlineName>Delta</airlineName>
+            <code>AFFFC4</code>
+            <departureDate>2015/02/20</departureDate>
+            <destination>PDX</destination>
+            <emptySeats>30</emptySeats>
+            <origin>MUA</origin>
+            <planeType>Boing 777</planeType>
+            <price>283.0</price>
+         </return>
+         <return>
+            <airlineName>Delta</airlineName>
+            <code>A1B3D4</code>
+            <departureDate>2015/02/12</departureDate>
+            <destination>PDX</destination>
+            <emptySeats>10</emptySeats>
+            <origin>MUA</origin>
+            <planeType>Boing 777</planeType>
+            <price>385.0</price>
+         </return>
+      </ns2:findFlightResponse>
+   </soap:Body>
+</soap:Envelope>
