@@ -30,6 +30,17 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<cloudHubDeployment>
+				    <uri>https://anypoint.mulesoft.com</uri>
+                    <muleVersion>4.3.0</muleVersion>
+                    <username>gaurimangal</username>
+                    <password>Suncity@456</password>
+                    <applicationName>System-Api-poc-delta</applicationName>
+                    <environment>Sandbox</environment>
+                    <workers>1</workers>
+                    <workerType>MICRO</workerType>
+                    <objectStoreV2>true</objectStoreV2>
+                   </cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -65,13 +76,6 @@
             <artifactId>mule-cloudhub-connector</artifactId>
             <version>1.0.1</version>
             <classifier>mule-plugin</classifier>
-        </dependency>
-    	<dependency>
-            <groupId>66e9620c-da40-4ecb-8085-9a34578e93ad</groupId>
-            <artifactId>sys_api_flights</artifactId>
-            <version>1.0.0</version>
-            <classifier>raml</classifier>
-            <type>zip</type>
         </dependency>
     	<dependency>
             <groupId>org.mule.modules</groupId>
