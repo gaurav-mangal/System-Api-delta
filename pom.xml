@@ -35,7 +35,7 @@
                     <muleVersion>4.3.0</muleVersion>
                     <username>gaurimangal1</username>
                     <password>Suncity@456</password>
-                    <applicationName>System-Api-poc-deltaflight</applicationName>
+                    <applicationName>systemApipocdeltaflights</applicationName>
                     <environment>Sandbox</environment>
                     <workers>1</workers>
                     <workerType>MICRO</workerType>
@@ -71,6 +71,10 @@
             <version>1.2.2</version>
             <classifier>mule-plugin</classifier>
         </dependency>
+        
+        
+        
+     
     	<dependency>
             <groupId>com.mulesoft.connectors</groupId>
             <artifactId>mule-cloudhub-connector</artifactId>
